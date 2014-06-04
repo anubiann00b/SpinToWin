@@ -14,9 +14,8 @@ OBJ
   
 PUB public_method_name
                
-  'repeat i from 0 to 31
   dira[1]:=1 'Set pin 0 to output.
-  repeat i from 100 to 100000
+  repeat i from 100 to 10000
     outa[1]:=1
     waitcnt(clkfreq/i+cnt)
     outa[1]:=0
