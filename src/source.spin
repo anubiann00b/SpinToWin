@@ -7,7 +7,7 @@ CON
 
 VAR
   long  symbol
-  'long  i
+  long  i
    
 OBJ
   'nickname      : "object_name"
@@ -16,11 +16,11 @@ PUB public_method_name
                
   'repeat i from 0 to 31
   dira[1]:=1 'Set pin 0 to output.
-  repeat
+  repeat i from 100 to 100000
     outa[1]:=1
-    waitcnt(clkfreq+cnt)
+    waitcnt(clkfreq/i+cnt)
     outa[1]:=0
-    waitcnt(clkfreq+cnt)
+    waitcnt(clkfreq/i+cnt)
 
 PRI private_method_name
 
